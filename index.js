@@ -1,4 +1,9 @@
-const { fetchMyIP, fetchCoordsByIp } = require("./iss");
+const {
+  fetchMyIP,
+  fetchCoordsByIp,
+  fetchIssData,
+  nextISSTimesForMyLocation,
+} = require("./iss");
 
 const log = (error, data) => {
   if (error) {
@@ -8,5 +13,4 @@ const log = (error, data) => {
   console.log(data);
 };
 
-fetchMyIP(log);
-fetchCoordsByIp("24.228.147.188", log);
+nextISSTimesForMyLocation(log);
